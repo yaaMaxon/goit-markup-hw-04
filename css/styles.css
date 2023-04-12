@@ -290,17 +290,6 @@ body {
 }
 
 /* SVG CONTENT */
-
-/* .benefits-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--cloud);
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-} */
-
 .benefits-list {
   display: flex;
   justify-content: space-between;
