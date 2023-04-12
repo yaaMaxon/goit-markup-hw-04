@@ -67,14 +67,11 @@ button {
 
 body {
   font-family: "Roboto", sans-serif;
-  /* font-weight: 400; */
   font-size: 16px;
 
   letter-spacing: 0.02em;
   background-color: #ffffff;
   color: var(--slate);
-
-  /* width: 1440px; */
 }
 
 .primary-title {
@@ -193,10 +190,22 @@ body {
   |============================
 */
 .hero {
-  background: var(--navy-blue);
-  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office.jpg);
+  background-color: var(--grey);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  height: 600px;
 }
 
 .hero-title {
@@ -277,6 +286,25 @@ body {
 .about-cmp-item {
   width: calc((100% - 72px) / 4);
 }
+
+/* SVG CONTENT */
+
+.benefits-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cloud);
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+}
+
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 8px;
+}
 /**
   |============================
   | WHAT ARE WE DOING
@@ -317,6 +345,7 @@ body {
 .employee-profession {
   text-align: center;
   line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .employee-item {
@@ -335,6 +364,73 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+
+/* SVG CONTENT */
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--iris);
+}
+
+.social-list-icon {
+  fill: var(--cloud);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background: var(--ocean);
+}
+
+/**
+  |============================
+  | CUSTOMERS
+  |============================
+*/
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.cmp-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+}
+
+.cmp-logo-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cmp-logo-icon {
+  fill: var(--light-slate);
+}
+
+.cmp-logo-icon:hover,
+.cmp-logo-icon:focus {
+  fill: var(--ocean);
+}
+
+.cmp-logo-link:hover,
+.cmp-logo-link:focus {
+  border: 1px solid var(--ocean);
+}
+
 /**
   |============================
   | FOOTER
@@ -356,13 +452,57 @@ body {
   margin-bottom: 16px;
 }
 
+.footer-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+
+  margin-bottom: 16px;
+}
+
+/* SVG CONTENT */
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--iris);
+}
+
+.footer-social-icon {
+  fill: var(--cloud);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--green);
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 120px;
+}
 /**
   |============================
   | PORTFOLIO
   |============================
 */
 .portfolio {
-  padding: 96px 120px;
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .btn-item {
@@ -377,8 +517,6 @@ body {
   color: var(--iris);
   background: var(--cloud);
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: 1px solid var(--cornflower);
 
@@ -400,6 +538,9 @@ body {
   background: var(--ocean);
 
   border: 1px solid transparent;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .service {
@@ -428,9 +569,14 @@ body {
 
 .service-item {
   background: #ffffff;
-  /* border: 1px solid #e7e9fc; */
 
   width: calc((100% - 48px) / 3);
+}
+
+.service-item:hover,
+.service-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .service-perm {
